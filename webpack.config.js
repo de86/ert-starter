@@ -1,5 +1,6 @@
 const path = require('path');
 const TSLintPlugin = require('tslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -27,6 +28,9 @@ module.exports = {
   plugins: [
     new TSLintPlugin({
       files: ['./src/**/*/*.ts']
+    }),
+    new HtmlWebpackPlugin({
+        template: 'src/index.html'
     })
   ],
   externals: {
@@ -39,7 +43,8 @@ module.exports = {
               target: 'http://localhost:3000',
               changeOrigin: true,
               pathRewrite: {'^/api' : ''},
-              secure: false
+              secure: false,
+              contentBase: '/dist'
           }
       }
   }
