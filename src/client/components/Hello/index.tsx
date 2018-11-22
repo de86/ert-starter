@@ -7,7 +7,7 @@ interface IHelloProps {
 export default class Hello extends React.PureComponent<IHelloProps, {}> {
     render (): React.ReactNode {
         return (
-            <div>{`Hello ${this.props.name}`}</div>
+            <div>{`gsddfafafgd ${this.props.name}`}</div>
         );
     }
 }

@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode development",
-    "dev": "concurrently --kill-others \"webpack-dev-server --mode development\" \"nodemon ./src/api/index.js\"",
+    "dev": "concurrently --kill-others \"webpack-dev-server --watch --mode development\" \"nodemon ./src/api/index.js\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.0.9",
     "concurrently": "^4.0.1",
     "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "source-map-loader": "^0.2.4",
